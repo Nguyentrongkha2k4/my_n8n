@@ -43,7 +43,7 @@ jobs:
             file: ./src/Dockerfile   # Đường dẫn đến tệp Dockerfile bên trong thư mục src
             builder: ${{ steps.buildx.outputs.name }}
             push: true
-            tags: ${{ secrets.DOCKERHUB_USERNAME }}/grade-portal-be-go-2:latest
+            tags: ${{ secrets.DOCKERHUB_USERNAME }}/my_n8n:latest
         # Bước 5: Kiểm tra kết quả
         - name: Verify
           run: echo ${{ steps.docker_build.outputs.digest }}
